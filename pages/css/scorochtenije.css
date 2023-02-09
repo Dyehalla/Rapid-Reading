@@ -2,13 +2,66 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Regular'), 
+    url('../fonts/OpenSans-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
 
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Light'), 
+    url('../fonts/OpenSans-Light.woff2') format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-SemiBold'), 
+    url('../fonts/OpenSans-SemiBold.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Bold'), 
+    url('../fonts/OpenSans-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .introduction-text-p {
+        font-weight: 400 !important;
+    }
+
+    .card-p {
+        font-weight: 600 !important;
+        font-size: 18px !important;
+    }
+
+    .save-time-p {
+        font-weight: 600 !important;
+        font-size: 20px !important;
+    }
+
+    .description-p {
+        font-weight: 600 !important;
+        font-size: 22px !important;
+    }
+
+}
 
 body {
     margin: 0;
     width: auto;
     min-width: 1140px;
-
+    font-family: "OpenSans", Arial;
 }
 
 a {
@@ -48,7 +101,7 @@ header {
 
 .header-list-item {
     display: inline;
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -68,7 +121,7 @@ header {
 }
 
 h1 {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -86,7 +139,7 @@ h1 {
 }
 
 .introduction-text-p {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -100,7 +153,7 @@ h1 {
     height: 55px;
     border: 2px solid #F66F24;
     border-radius: 25px;
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -137,7 +190,7 @@ h1 {
 }
 
 .description-head {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -145,7 +198,7 @@ h1 {
 }
 
 .description-p {
-    font-family: 'Arial';
+    font-family: "OpenSans", 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -180,7 +233,7 @@ h1 {
 }
 
 .card-p {
-    font-family: 'Arial';
+    font-family:'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -192,7 +245,7 @@ h1 {
 }
 
 .card-head {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -236,7 +289,7 @@ h1 {
 }
 
 .save-time-head {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
@@ -249,7 +302,7 @@ h1 {
 }
 
 .save-time-p {
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -265,7 +318,7 @@ h1 {
     height: 55px;
     border: 2px solid #F66F24;
     border-radius: 25px;
-    font-family: 'Arial';
+    font-family: 'OpenSans', 'Arial';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
