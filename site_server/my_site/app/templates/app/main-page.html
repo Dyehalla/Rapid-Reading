@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Rapid Reading</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/scorochtenije.css">
+    <link rel="stylesheet" href="{% static '/app/normalize.css' %}">
+    <link rel="stylesheet" href="{% static '/app/scorochtenije.css' %}">
 </head>
 
 <body>
     <header>
         <div class="container header-container">
-            <a class="logo" href="%">
-                <img src="img/Logo img.svg" alt="logo img">
+            <a class="logo" href="#">
+                <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
             </a>
             <nav class="header-nav">
                 <ul class="header-list">
@@ -23,7 +24,7 @@
                         </a>
                     </li>
                     <li class="header-list-item">
-                        <a href="#" class="header-link">
+                        <a href="{% url 'auth' %}" class="header-link">
                             Войти
                         </a>
                     </li>
@@ -41,7 +42,7 @@
         <section class="get-started">
             <div class="container">
                 <div class="introduction">
-                    <img src="img/get-started.png" alt="get-started" class="get-started-img">
+                    <img src="{% static 'app/img/get-started.png' %}" alt="get-started" class="get-started-img">
                     <div class="introduction-text">
                         <h1>
                             Повысьте свои навыки скорочтения
@@ -49,13 +50,13 @@
                         <p class="introduction-text-p">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                         </p>
-                        <a href="#">
+                        <a href="{% url 'auth' %}">
                             <button class="start-btn">
                                 Начать обучение
                             </button>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -64,81 +65,81 @@
             <div class="line">
                 <div class="cards">
                     <div class="card card1">
-                        <img class="card-img" src="img/ellipse card 1.png" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 1.png' %}" alt="ellipse">
                         <h3 class="card-head">
                             20 минут в день
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                         </p>
                     </div>
                     <div class="card card2">
-                        <img class="card-img" src="img/ellipse card 2.png" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 2.png' %}" alt="ellipse">
                         <h3 class="card-head">
                             Запоминайте больше
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                         </p>
                     </div>
                     <div class="card card3">
-                        <img class="card-img" src="img/ellipse card 3.png" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 3.png' %}" alt="ellipse">
                         <h3 class="card-head">
                             Читайте в 8 раз быстрее
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                         </p>
                     </div>
                     <div class="card card4">
-                        <img class="card-img" src="img/ellipse card 4.png" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 4.png' %}" alt="ellipse">
                         <h3 class="card-head">
                             Осваивайте любые списки литературы
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="orange-description">
                 <div class="description-container">
-                    <img src="img/description.png" alt="description img">
+                    <img src="{% static 'app/img/description.png' %}" alt="description img">
                     <div class="description-text">
                         <h2 class="description-head">
-                            Онлайн-самоучитель скорочтения 
+                            Онлайн-самоучитель скорочтения
                         </h2>
                         <p class="description-p">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
                         </p>
                     </div>
-                    <img src="img/circle.png" alt="decoration" class="pink-circle">
-                    
+                    <img src="{% static 'app/img/circle.png' %}" alt="decoration" class="pink-circle">
+
                 </div>
             </div>
         </section>
-        
+
         <section class="start-now">
             <article class="start-now-article">
-                <img class="start-now-img" src="img/start now.png" alt="start-now">
+                <img class="start-now-img" src="{% static 'app/img/start now.png' %}" alt="start-now">
             <div class="save-time">
                 <h2 class="save-time-head">
                     Сэкономьте время уже сегодня, начав прямо сейчас
                 </h2>
                 <p class="save-time-p">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                 </p>
-                <a href="#">
+                <a href="{% url 'auth' %}">
                     <button class="register-btn">
-                        Зарегистрироваться
+                        Зарегестрироваться
                     </button>
                 </a>
             </div>
             </article>
         </section>
 
-    </main>   
+    </main>
 
 </body>
 

@@ -1,11 +1,18 @@
 from timeit import default_timer
 
 from django.shortcuts import render
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpRequest
 
 
-def home_index(request: HttpRequest):
+def home_page(request: HttpRequest):
     context = {
-        'time_running': default_timer(),
+
     }
-    return render(request, 'app/index.html', context=context)
+    return render(request, 'app/main-page.html', context=context)
+
+
+def auth_view(request: HttpRequest):
+    context = {
+
+    }
+    return render(request, 'myauth/auth.html', context=context)
