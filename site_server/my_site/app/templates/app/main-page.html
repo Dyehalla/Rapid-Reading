@@ -23,15 +23,25 @@
                             Главная
                         </a>
                     </li>
-                    <li class="header-list-item">
-                        <a href="{% url 'auth' %}" class="header-link">
-                            Войти
-                        </a>
-                    </li>
+
                     <li class="header-list-item">
                         <a href="#" class="header-link">
                             Контакты
                         </a>
+                    </li>
+
+                    <li class="header-list-item">
+                        <div class="profile">
+                            {% if not user.is_authenticated %}
+                            <a href="{% url 'auth' %}" class="header-link">
+                                Войти
+                            </a>
+                            {% else %}
+                                <img src="{% static 'app/img/profile.png' %}" alt="profile">
+                                 <span class="profile-name">{{ user.username }}</span>
+                            {% endif %}
+                        </div>
+                        
                     </li>
                 </ul>
             </nav>

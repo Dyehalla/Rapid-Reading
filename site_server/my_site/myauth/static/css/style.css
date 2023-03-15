@@ -254,6 +254,13 @@
    font-size: 18px;
 }
 
+.error {
+   text-align: center;
+   color: red;
+   width: 125px;
+   height: 40px;
+}
+
 .click-efect {
    position: absolute;
    top: 0;
@@ -399,3 +406,4 @@ html {
    list-style-type: none;
    outline: none;
 }
+

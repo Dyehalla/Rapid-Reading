@@ -1,9 +1,9 @@
-from django.urls import path
-from .views import home_page, auth_view
+from django.urls import path, include
+from .views import HomePage
 
 appname = "app"
 
 urlpatterns = [
-    path("", home_page, name='home'),
-    path('auth/', auth_view, name='auth')
+    path("", HomePage.as_view(), name='home'),
+    path('auth/', include('myauth.urls'))
 ]
