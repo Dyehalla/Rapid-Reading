@@ -21,6 +21,8 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/my_site/app/templates" />
+        <option value="$MODULE_DIR$/my_site/speedcheckapp/templates" />
+        <option value="$MODULE_DIR$/my_site/myauth/templates" />
       </list>
     </option>
   </component>

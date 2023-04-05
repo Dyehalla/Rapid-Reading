@@ -25,15 +25,21 @@
                     </li>
 
                     <li class="header-list-item">
-                        <a href="#" class="header-link">
-                            Контакты
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
                         </a>
+                        {% else %}
+                        <a href="{% url 'reg' %}" class="header-link">
+                            Зарегистрироваться
+                        </a>
+                        {% endif %}
                     </li>
 
                     <li class="header-list-item">
                         <div class="profile">
                             {% if not user.is_authenticated %}
-                            <a href="{% url 'auth' %}" class="header-link">
+                            <a href="{% url 'login' %}" class="header-link">
                                 Войти
                             </a>
                             {% else %}
@@ -60,7 +66,7 @@
                         <p class="introduction-text-p">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                         </p>
-                        <a href="{% url 'auth' %}">
+                        <a href="{% if user.authenticated %}#{% else %}{% url 'login' %}{% endif %}">
                             <button class="start-btn">
                                 Начать обучение
                             </button>
@@ -140,7 +146,7 @@
                 <p class="save-time-p">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                 </p>
-                <a href="{% url 'auth' %}">
+                <a href="">
                     <button class="register-btn">
                         Зарегестрироваться
                     </button>
@@ -148,6 +154,9 @@
             </div>
             </article>
         </section>
+
+        <div>{{ error }}</div>
+
 
     </main>
 
