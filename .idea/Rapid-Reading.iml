@@ -11,6 +11,7 @@
       <list>
         <option value="$MODULE_DIR$/site_server/my_site/app/templates" />
         <option value="$MODULE_DIR$/site_server/my_site/myauth/templates" />
+        <option value="$MODULE_DIR$/site_server/my_site/speedcheckapp/templates" />
       </list>
     </option>
   </component>

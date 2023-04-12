@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Rapid Reading</title>
-    <link rel="stylesheet" href="{% static 'speedcheckapp/css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'speedcheckapp/css/test.css' %}">
+    <link rel="stylesheet" href="{% static '/app/normalize.css' %}">
+    <link rel="stylesheet" href="{% static '/app/profile-results.css' %}">
 </head>
 
 <body>
@@ -47,42 +47,32 @@
                                  <span class="profile-name">{{ user.username }}</span>
                             {% endif %}
                         </div>
-                        
+
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <h1 class="title">
-            {{ title }}
-        </h1>
-        <div class="text">
-            {% for par in text %}
-                <p>{{ par }}</p>
+        <table>
+            <tr>
+                <th>Дата</th>
+                <th>Скорость</th>
+                <th>Время</th>
+                <th>Правильных ответов</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <th>{{result.date}}</th>
+                <th>{{result.speed}}</th>
+                <th>{{ result.time }}</th>
+                <th>{{ result.questions }}</th>
+            </tr>
             {% endfor %}
-        </div>
+        </table>
 
-        <div class="btn-and-timer">
-            <a href="">
-                <form method="post">
-                    {% csrf_token %}
-                    <button class="finish-btn" onclick="end()" type="submit">
-                        <span class="btn-text">Прочитано</span>
-                    </button>
-                    <input type="text" class="to-send" value="None" id="to-send" name="time">
-                </form>
-            </a>
-            <div class="timer">
-                <b><span id="minute">00</span>:<span id="second">00</span>:<span id="ms">00</span></b>
-            </div>
-        </div>
-        
-        
-        <script src="{% static 'speedcheckapp/js/test.js' %}"></script>
     </main>
-
-
 </body>
 
 </html>

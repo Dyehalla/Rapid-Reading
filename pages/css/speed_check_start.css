@@ -52,17 +52,8 @@ a {
     margin: 0 auto;
 }
 
-.header-nav {
-    display: inline-block;
-    padding-right: 40px;
-}
-
-.logo {
-    padding-left: 40px;
-}
-
 header {
-    margin-bottom: 84px;
+    margin-bottom: 127px;
     margin-top: 40px;
 }
 
@@ -75,7 +66,6 @@ header {
 .header-list {
     list-style-type: none;
     margin: 0;
-    display: flex;
 }
 
 .header-list-item {
@@ -87,10 +77,13 @@ header {
     padding: 15px;
 }
 
-.profile {
-    display: inline-flex;
-    align-content: center;
-    grid-gap: 5px;
+.header-nav {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.logo {
+    padding-left: 40px;
 }
 
 .main {
@@ -102,74 +95,34 @@ header {
     margin: 0 auto;
 }
 
-.img-and-head {
-    display: flex;
-    align-items: center;
-
-
-}
-
-.head {
-    font-family: 'OpenSans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    color: #FD6916;
-}
-
-.res-p {
-    position: relative;
-    font-family: 'OpenSans';
+.instruction-head {
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
     line-height: 68px;
-    text-align: center;
-
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin: 0;
 }
 
-.orange-text {
-    color: #FD6916;
+.head {
+    display: flex;
+    grid-gap: 35px;
+    align-items: center;
+    margin-bottom: 45px;
 }
 
-.arrow-1 {
-    position: absolute;
-    left: 710px;
-    top:100px
-
-}
-
-.arrow-2 {
-    position: absolute;
-    top: 70px;
-    right: 166px;
-}
-
-.arrow-3 {
-    position: absolute;
-    top: 65px;
-    left: 198px
-}
-
-.login {
-    text-align: center;
+.instruction {
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
-    line-height: 34px;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 96px;
 }
 
-.profile {
-    display: inline-flex;
-    align-content: center;
-    grid-gap: 5px;
-}
-
-.save-btn {
-    margin-bottom: 50px;
+.start-btn {
     width: 354px;
     height: 84px;
     font-family: 'OpenSans';
@@ -183,4 +136,12 @@ header {
     color: white;
     cursor: pointer;
     border: none;
+}
+
+.orange-text {
+    color: #FD6916;
+}
+
+.to-send{
+    display: none;
 }

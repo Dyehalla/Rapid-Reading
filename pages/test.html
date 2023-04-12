@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Rapid Reading</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a class="logo" href="#">
+                <img src="img/Logo img.svg" alt="logo img">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-list-item">
+                        <a href="#" class="header-link">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="header-list-item">
+                        <a href="#" class="header-link">
+                            Контакты
+                        </a>
+                    </li>
+
+                    <li class="header-list-item">
+
+                        <a href="#" class="header-link">
+                            Войти
+                        </a>
+
+                        
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1 class="title">
+            Title
+        </h1>
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus, leo non mollis lacinia, lorem ipsum convallis tortor, fermentum aliquet risus orci id arcu. Morbi ac gravida ipsum. Phasellus ultricies lacus nec accumsan hendrerit. Mauris ut nulla ac quam dapibus sagittis. Vivamus finibus felis a urna bibendum, eget congue nisi fermentum. Fusce efficitur ante neque, id accumsan lacus mattis lobortis. Morbi sed vulputate nisl. Nullam auctor vitae magna a porta. Quisque a pellentesque lacus. Nam dictum nisi purus, et egestas nisl pulvinar vestibulum. Integer sit amet metus arcu. Praesent vestibulum dui turpis, id blandit neque bibendum eu. Nunc pellentesque eget nisl a viverra. Donec eu dui vitae ante tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel sapien nisi Nullam a gravida arcu. Aenean molestie et tortor non rutrum. Suspendisse nec orci malesuada, imperdiet turpis a, gravida ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque porttitor finibus metus, quis cursus magna volutpat a. Nulla egestas in diam eu efficitur. Curabitur ut diam nulla. Nullam suscipit, elit ut ullamcorper blandit, ligula ligula tempor nisl, ac gravida mauris lorem non quam. Aliquam erat volutpat. Phasellus ultrices egestas arcu eu molestie.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nisi velit, rutrum eu auctor viverra, tristique eget nulla. Donec sagittis commodo libero, at maximus sapien varius imperdiet. Vivamus elit sapien, finibus vitae suscipit vitae, pretium ut tortor. Mauris eu auctor lorem, eget aliquet risus. Fusce pulvinar mollis ipsum sit amet tincidunt. Pellentesque vitae laoreet nibh, ut lobortis erat. Suspendisse non mi vitae odio condimentum imperdiet scelerisque ac est. Maecenas quis augue metus. Quisque vitae mauris lectus. Vivamus eget felis mauris. Sed a augue enim.
+        </div>
+
+        <div class="btn-and-timer">
+            <a href="">
+                <form method="post">
+                    <button class="finish-btn" onclick="end()" type="submit">
+                        <span class="btn-text">Прочитано</span>
+                    </button>
+                    <input type="text" class="to-send" value="None" id="to-send">
+                </form>
+            </a>
+            <div class="timer">
+                <b><span id="minute">00</span>:<span id="second">00</span>:<span id="ms">00</span></b>
+            </div>
+        </div>
+        
+        
+        <script src="js/test.js"></script>
+    </main>
+
+
+</body>
+
+</html>

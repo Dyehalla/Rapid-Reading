@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Regular'),
+    url('fonts/OpenSans-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Light'),
+    url('fonts/OpenSans-Light.woff2') format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-SemiBold'),
+    url('fonts/OpenSans-SemiBold.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans-Bold'),
+    url('fonts/OpenSans-Bold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .introduction-text-p {
+        font-weight: 400 !important;
+    }
+
+    .card-p {
+        font-weight: 600 !important;
+        font-size: 18px !important;
+    }
+
+    .save-time-p {
+        font-weight: 600 !important;
+        font-size: 20px !important;
+    }
+
+    .description-p {
+        font-weight: 600 !important;
+        font-size: 22px !important;
+    }
+
+}
+
+body {
+    margin: 0;
+    width: auto;
+    min-width: 1140px;
+    font-family: "OpenSans", Arial, sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.header-nav {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.logo {
+    padding-left: 40px;
+}
+
+header {
+    margin-bottom: 84px;
+    margin-top: 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.header-list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+.header-list-item {
+    display: inline;
+    font-family: 'OpenSans', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.profile {
+    display: inline-flex;
+    align-content: center;
+    grid-gap: 5px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
