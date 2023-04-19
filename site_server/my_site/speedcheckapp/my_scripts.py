@@ -6,7 +6,7 @@ def random_text(nums_list_str: str) -> dict:
     data = dict()
     i = choice(nums_list)
     my_text = ['Text 1.txt', 'Text 2.txt', 'Text 3.txt', 'Text 4.txt', 'Text 5.txt', 'Text 6.txt', 'Text 7.txt', 'Text 8.txt'][int(i) - 1]
-    text_file = open(f'C:\Rapid-Reading\site_server\\texts\\' + my_text)
+    text_file = open(f'..\\texts\\' + my_text)
     data['text'] = text_file.readlines()
 
     length = 0
