@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-p {
-    margin-top: 0;
-}
-
 @font-face {
     font-family: 'OpenSans';
     src: local('OpenSans-Regular'), 
@@ -51,13 +47,17 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    text-align: center;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
 }
 
 header {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 40px;
 }
 
@@ -70,6 +70,7 @@ header {
 .header-list {
     list-style-type: none;
     margin: 0;
+    display: flex;
 }
 
 .header-list-item {
@@ -90,9 +91,61 @@ header {
     padding-left: 40px;
 }
 
-.start-btn {
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.head {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    color: #FD6916;
+    text-align: center;
+    margin-top: 0;
+}
+
+.question {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.question-head {
+    margin-top: 15px;
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+}
+
+label {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    color: #F66F24;
+}
+
+.answers {
+    margin: 0 auto;
+    width: 500px;
+    height: 91px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.check {
     width: 354px;
     height: 84px;
+    margin-top: 25px;
     font-family: 'OpenSans';
     font-style: normal;
     font-weight: 700;
@@ -106,65 +159,53 @@ header {
     border: none;
 }
 
-main {
+.question {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
 }
 
-.title {
-    color: #FD6916;
-    font-family: 'OpenSans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 68px;
-    margin: 0;
-    margin-bottom: 30px;
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 10px;
 }
 
-.text {
-    display: inline-block;
-    max-width: 900px;
-    font-family: 'OpenSans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-indent: 40px;
-    margin-bottom: 20px;
+.swiper {
+	width: 1170px;
+	margin: 0 auto;
+    position: relative;
 }
 
-.finish-btn {
-    background: linear-gradient(90deg, #FBD4BF -21.61%, #FFB78E -21.6%, #FD6916 79.66%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
-    width: 354px;
-    height: 84px;
-    border: none;
+.swiper-pagination-bullet {
+	width: 15px;
+	height: 15px;
 }
 
-.btn-text {
-    font-family: 'OpenSans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 41px;
-    color: #FFFFFF;
+.swiper-pagination-bullet-active {
+	background-color: #fff;
 }
 
-.btn-and-timer {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+.swiper-slide {
+    background-color: #FFF1E9;
+    border-radius: 30px;
 }
 
-.timer {
-    width: 113px;
-    text-align: center;
-    font-size: 25px;
-}
-
-.to-send {
+.swiper-button-next::after .swiper-button-prev::after {
     display: none;
+}
+
+.button-next {
+    cursor: pointer;
+    position: absolute;
+    top: 65px;
+    right: 50px;
+    z-index: 10000000;
+}
+
+.button-prev {
+    cursor: pointer;
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    z-index: 10000000;
 }

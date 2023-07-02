@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Rapid Reading</title>
+    <link rel="stylesheet" href="{% static 'speedcheckapp/css/swiper.css' %}">
+	<link rel="stylesheet" href="{% static 'speedcheckapp/css/questions.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a class="logo" href="#">
+                <img src="{% static 'speedcheckapp/img/Logo img.svg' %}" alt="logo img">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-list-item">
+                        <a href="#" class="header-link">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="header-list-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
+                        </a>
+                        {% else %}
+                        <a href="{% url 'reg' %}" class="header-link">
+                            Зарегистрироваться
+                        </a>
+                        {% endif %}
+                    </li>
+
+                    <li class="header-list-item">
+                        <div class="profile">
+                            {% if not user.is_authenticated %}
+                            <a href="{% url 'login' %}" class="header-link">
+                                Войти
+                            </a>
+                            {% else %}
+                                <img src="{% static 'speedcheckapp/img/profile.png' %}" alt="profile">
+                                 <span class="profile-name">{{ user.username }}</span>
+                            {% endif %}
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <h1 class="head">Вопросы к тексту</h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">{{ q1 }}</h2>
+                    <div class="answers">
+                        {% for option in o1 %}
+                        <label>
+                            <input type="radio" name="{{ option }}"/>
+                            <span>{{ option }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">{{ q2 }}</h2>
+                    <div class="answers">
+                        {% for option in o2 %}
+                        <label>
+                            <input type="radio" name="{{ option }}"/>
+                            <span>{{ option }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">{{ q3 }}</h2>
+                    <div class="answers">
+                        {% for option in o3 %}
+                        <label>
+                            <input type="radio" name="{{ option }}"/>
+                            <span>{{ option }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">{{ q4 }}</h2>
+                    <div class="answers">
+                        {% for option in o4 %}
+                        <label>
+                            <input type="radio" name="{{ option }}"/>
+                            <span>{{ option }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">{{ q5 }}</h2>
+                    <div class="answers">
+                        {% for option in o5 %}
+                        <label>
+                            <input type="radio" name="{{ option }}"/>
+                            <span>{{ option }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <!-- кнопки пагинации -->
+            <div class="swiper-pagination"></div>
+            <!-- кнопки для навигации -->
+
+            <div class="button-prev">
+                <img src="{% static 'speedcheckapp/img/arrow-left.png' %}" alt="prev">
+            </div>
+
+            <div class="button-next">
+                <img src="{% static 'speedcheckapp/img/arrow-right.png' %}" alt="next">
+            </div>
+
+        </div>
+        <main class="main">
+            <a href=""><button class="check">Проверить</button></a>
+        </main>
+
+        <script src="{% static 'speedcheckapp/js/swiper.js' %}"></script>
+	    <script src="{% static 'speedcheckapp/js/questions.js' %}"></script>
+    </form>
+</body>
+
+</html>

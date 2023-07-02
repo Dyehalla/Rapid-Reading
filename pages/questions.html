@@ -1,3 +1,4 @@
+{load}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Rapid Reading</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/questions.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/questions.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
                     <li class="header-list-item">
                         <a href="#" class="header-link">
-                            Контакты
+                            Зарегистрироваться
                         </a>
                     </li>
 
@@ -34,125 +35,159 @@
                         <a href="#" class="header-link">
                             Войти
                         </a>
-
-                        
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    
     <form method="POST">
-        <main class="main">
-            <h1 class="head">Вопросы к тексту</h1>
-            <div class="question">
-                <h2 class="question-head">Lorem ipsum dolor sit amet fig wer sopem?</h2>
-                <div class="answers">
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                </div>
-            </div>
-            <div class="question">
-                <h2 class="question-head">Lorem ipsum dolor sit amet fig wer sopem?</h2>
-                <div class="answers">
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                </div>
-            </div>
-            <div class="question">
-                <h2 class="question-head">Lorem ipsum dolor sit amet fig wer sopem?</h2>
-                <div class="answers">
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                </div>
-            </div>
-            <div class="question">
-                <h2 class="question-head">Lorem ipsum dolor sit amet fig wer sopem?</h2>
-                <div class="answers">
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                </div>
-            </div>
-            <div class="question">
-                <h2 class="question-head">Lorem ipsum dolor sit amet fig wer sopem?</h2>
-                <div class="answers">
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="radio"/>
-                        <span>HTML</span>
-                    </label>
+        <h1 class="head">Вопросы к тексту</h1>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">Самой вкусной рыбой Черного моря считают</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Кефаль</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Камбала</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Султанка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Скумбрия</span>
+                        </label>
+                    </div>
                 </div>
             </div>
 
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">С каким камнем сравнили цвет воды в бухте</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Алмаз</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Топаз</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Бирюза</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Изумруд</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">С какой птицей сравнили купающихся бухте мальчишек</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Утка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Чайка</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Баклан</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Буревестник</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">Что напоминали глаза греков</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Черные впадины</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Мутные озера</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Крупные Маслины</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Мелкие Маслины</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="question">
+                    <h2 class="question-head">Что сбывали на рынке</h2>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Новую обувь</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Ворованные часы</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Бабушкин хрусталь</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="radio"/>
+                            <span>Поношенное платье</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            </div>
+            <!-- кнопки пагинации -->
+            <div class="swiper-pagination"></div>
+            <!-- кнопки для навигации -->
+
+            <div class="button-prev">
+                <img src="img/arrow-left.png" alt="prev">
+            </div>
+
+            <div class="button-next">
+                <img src="img/arrow-right.png" alt="next">
+            </div>
+
+        </div>
+        <main class="main">
             <a href=""><button class="check">Проверить</button></a>
         </main>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	    <script src="js/questions.js"></script>
     </form>
 </body>
 

@@ -5,8 +5,8 @@ def random_text(nums_list_str: str) -> dict:
     nums_list = nums_list_str.split('/')
     data = dict()
     i = choice(nums_list)
-    my_text = ['Text 1.txt', 'Text 2.txt', 'Text 3.txt', 'Text 4.txt', 'Text 5.txt', 'Text 6.txt', 'Text 7.txt', 'Text 8.txt'][int(i) - 1]
-    text_file = open(f'..\\texts\\' + my_text)
+    my_text = ['В ледяном плену.txt', 'Вкус хлеба.txt', 'Дом на деревьях.txt', 'Дрова.txt', 'Моя ближайшая подруга Алёна.txt', 'Мыши.txt', 'Народное гулянье.txt', 'Племя Земзе.txt', 'Старый сад.txt', 'Южный рынок.txt'][int(i) - 1]
+    text_file = open(f'..\\texts\\' + my_text, encoding='utf-8')
     data['text'] = text_file.readlines()
 
     length = 0
@@ -15,7 +15,7 @@ def random_text(nums_list_str: str) -> dict:
 
     nums_list.remove(i)
     if len(nums_list) == 0:
-        data['new_read_list'] = '1/2/3/4/5/6/7/8'
+        data['new_read_list'] = '1/2/3/4/5/6/7/8/9/10'
     else:
         data['new_read_list'] = '/'.join(nums_list)
 
@@ -43,6 +43,6 @@ def time_converter(time_string: str, words: int):
         else:
             minutes = 0
 
-    speed = words / (minutes + seconds / 60)
+    speed = round(words / (minutes + seconds / 60))
 
     return [speed, minutes, seconds]

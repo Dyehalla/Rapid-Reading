@@ -83,6 +83,11 @@
         <p class="res-p" style="margin-top: 20px;">
             <span class="orange-text">{{ speed }}</span> <b>слов</b> в <i>минуту</i>
         </p>
+
+        <p class="correct-answers">
+            Вы ответили верно на {{ correct_answers }} вопросов
+        </p>
+
         {% if user.is_authenticated %}
             <a href="{% url 'save' %}"><button class="save-btn">Сохранить</button></a>
         {% else %}
