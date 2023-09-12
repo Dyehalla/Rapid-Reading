@@ -44,7 +44,7 @@
                             </a>
                             {% else %}
                                 <img src="{% static 'app/img/profile.png' %}" alt="profile">
-                                 <span class="profile-name">{{ user.username }}</span>
+                                 <a href="{% url 'results_list' %}"><span class="profile-name">{{ user.username }}</span></a>
                             {% endif %}
                         </div>
                         

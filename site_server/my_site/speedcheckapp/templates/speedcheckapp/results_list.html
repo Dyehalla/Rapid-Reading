@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ru">
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
@@ -56,46 +58,26 @@
 
 
     <main class="main">
-        {% if not seconds %}
-        <h1 class="head">ПРОЙДИТЕ ТЕСТ И НАЖМИТЕ "ПРОЧИТАНО", ЧТОБЫ УЗНАТЬ РЕЗУЛЬТАТЫ</h1>
-        {% else %}
-        <div class="img-and-head">
-            <img src="{% static 'speedcheckapp/img/stopwatch.svg' %}" alt="stopwatch" class="head-img">
-            <h1 class="head">РЕЗУЛЬТАТ</h1>
+        <div class="table">
+            <table>
+
+                <tr>
+                    <th>Дата</th>
+                    <th>Время</th>
+                    <th>Скорость</th>
+                    <th>Правильные ответы</th>
+                </tr>
+                {% for result in results %}
+                    <tr>
+                        <th>{{ result.date }}</th>
+                        <th>{{ result.time }}</th>
+                        <th>{{ result.speed }} с/м</th>
+                        <th>{{ result.questions }}</th>
+                    </tr>
+                {% endfor %}
+
+            </table>
         </div>
-
-        <p class="res-p">
-            В общей сложности вы <i>затратили</i>:<br>
-            <span class="orange-text">{{ minutes }}</span> минут(ы) <span class="orange-text">{{ seconds }}</span> секунд(ы)
-            <img src="{% static 'speedcheckapp/img/Arrow 1.svg' %}" alt="" class="arrow-1">
-        </p>
-
-        <p class="res-p">
-            Вы читали текст, состоящий из <span class="orange-text">{{ words }}</span> слов
-            <img src="{% static 'speedcheckapp/img/Arrow 2.svg' %}" alt="" class="arrow-2">
-        </p>
-
-        <p class="res-p">
-            Итого ваша <span class="orange-text">скорость</span> составляет
-            <img src="{% static 'speedcheckapp/img/Arrow 3.svg' %}" alt="" class="arrow-3">
-        </p>
-
-        <p class="res-p" style="margin-top: 20px;">
-            <span class="orange-text">{{ speed }}</span> <b>слов</b> в <i>минуту</i>
-        </p>
-
-        <p class="correct-answers">
-            Вы ответили верно на <span class="orange-text">{{ correct_answers }}</span> вопросов
-        </p>
-
-        {% if user.is_authenticated %}
-            <a href="{% url 'save' %}"><button class="save-btn">Сохранить</button></a>
-        {% else %}
-            <p class="login">
-                Хотите сохранять последующие результаты?<br><a href="{% url 'login' %}"><span class="orange-text"><u>Войдите</u></span></a> в учетную запись
-            </p>
-        {% endif %}
-        {% endif %}
     </main>
 
 </body>

@@ -56,9 +56,10 @@ def save_view(request: HttpRequest):
     if request.session.get('time'):
         time = request.session.get('time')
         words = request.session.get('words')
+        questions = request.session.get('correct_answers')
         speed, minutes, seconds = time_converter(time, words)
-        Result.objects.create(user_profile=request.user.profile, time=f'{minutes}м {seconds}с',
-                              speed=speed)
+        Result.objects.create(user_id=request.user.id, time=f'{minutes}м {seconds}с',
+                              speed=speed, questions=questions)
     return redirect('home')
 
 
@@ -91,3 +92,14 @@ def questions_view(request: HttpRequest):
 
     request.session['correct_answers'] = len(my_answers.intersection(correct_answers))
     return redirect('result')
+
+
+def results_list_view(request: HttpRequest):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        print(user_id)
+        context = {
+            'results': Result.objects.filter(user_id=user_id)
+        }
+        return render(request, 'speedcheckapp/results_list.html', context=context)
+    return redirect('login')

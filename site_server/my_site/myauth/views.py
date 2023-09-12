@@ -6,8 +6,6 @@ from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
-from .models import Profile
-
 
 def login_view(request: HttpRequest) -> HttpResponse:
     if request.method == 'GET':
@@ -34,7 +32,6 @@ class RegisterView(CreateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        Profile.objects.create(user=self.object)
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')
         user = authenticate(self.request, username=username, password=password)
