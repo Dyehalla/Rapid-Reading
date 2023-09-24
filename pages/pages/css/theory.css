@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #FFEFD5;
+}
+
+@font-face {
+    font-family: 'Inglobal';
+    src: local('Inglobal-Regular'), 
+    url('../fonts/Inglobal-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inglobal';
+    src: local('Inglobal-Bold'), 
+    url('../fonts/Inglobal-Regular.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: auto;
+    min-width: 1140;
+    width: 1440px;
+    font-family: "OpenSans", Arial;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    margin-left: 138px;
+    margin-bottom: 60px;
+    margin-top: 26px;
+    width: 1165px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin: 0;
+}
+
+.header-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.header-list-item {
+    display: inline;
+    font-family: 'Inglobal', 'Arial';
+    font-size: 22px;
+    padding: 15px;
+}
+
+.header-nav {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.logo2 {
+    margin-left: 320px;
+    margin-bottom: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-container {
+    position: relative;
+    width: 930px;
+    background-color: #FFE6BE;
+    border-radius: 45px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+.images {
+    position: absolute;
+    top: -41px;
+}
+
+.content-head {
+    margin: 0;
+    font-size: 25px;
+    display: block;
+}
+
+.content {
+    font-size: 23px;
+    font-family: 'Inglobal';
+    font-weight: 400;
+}
+
+.content-head-container {
+    font-family: 'Inglobal', 'Arial';
+    font-weight: 700;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 274px;
+    margin-bottom: 25px;
+}
+
+.train-container {
+    padding-top: 38px;
+    width: 172px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.train-head {
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.train-head-container {
+    font-family: 'Inglobal', 'Arial';
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.week-buttons {
+    width: 143px;
+    height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.week-btn {
+    font-family: 'Inglobal', 'Arial';
+    font-weight: 700;
+    font-size: 20px;
+    width: 143px;
+    height: 34px;
+    border-radius: 30px;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.week-1 {
+    background-color: #A0D477;
+}
+
+.week-2 {
+    background-color: #CFE73F;
+}
+
+.week-3 {
+    background-color: #F0DF48;
+}
+
+.week-4 {
+    background-color: #F4BB27;
+}
+
+.week-5 {
+    background-color: #FD6916;
+}
+
+.week-6 {
+    background-color: #DC6161;
+}
+
+.week-7 {
+    background-color: #C03434;
+}
+
+.week-8 {
+    background-color: #791313;
+}
+
+.chapter-nav-head {
+    font-family: 'Inglobal', 'Arial';
+    font-weight: 700;
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.chapter-nav-container {
+    padding-top: 38px;
+    width: 183px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-circle {
+    width: 183px;
+    height: 183px;
+    background-image: url("../img/Ellipse chapters.svg");
+    position: relative;
+}
+
+.chapters-head {
+    font-size: 22px;
+    font-weight: 700;
+    position: absolute;
+    top: 41%;
+    left: 33%;
+}
+
+.btn {
+    font-family: 'Inglobal', 'Arial';
+    font-weight: 700;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(204, 49, 0, 0.71);
+}
+
+.btn-1 {
+    left: 78px;
+    top: 11px;
+}
+
+.btn-2 {
+    left: 118px;
+    top: 26px;
+}
+
+.btn-3 {
+    left: 143px;
+    top: 60px;
+}
+
+.btn-4 {
+    left: 143px;
+    top: 97px;
+}
+
+.btn-5 {
+    left: 118px;
+    top: 133px;
+}
+
+.btn-6 {
+    left: 78px;
+    top: 147px;
+}
+
+.btn-7 {
+    left: 38px;
+    top: 133px;
+}
+
+.btn-8 {
+    left: 12px;
+    top: 99px;
+}
+
+.arrow-circle {
+    position: absolute;
+    left: 24px;
+    top: 32px;
+
+}
