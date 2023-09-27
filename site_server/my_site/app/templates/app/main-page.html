@@ -16,6 +16,9 @@
             <a class="logo" href="#">
                 <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
             </a>
+
+            <img class="logo2" src="{% static 'app/img/Logo 2.svg' %}" alt="cool logo img">
+
             <nav class="header-nav">
                 <ul class="header-list">
                     <li class="header-list-item">
@@ -30,8 +33,8 @@
                             Выйти
                         </a>
                         {% else %}
-                        <a href="{% url 'reg' %}" class="header-link">
-                            Зарегистрироваться
+                        <a href="#" class="header-link">
+                            Учебник
                         </a>
                         {% endif %}
                     </li>
@@ -43,8 +46,7 @@
                                 Войти
                             </a>
                             {% else %}
-                                <img src="{% static 'app/img/profile.png' %}" alt="profile">
-                                 <a href="{% url 'results_list' %}"><span class="profile-name">{{ user.username }}</span></a>
+                                 <a href="{% url 'results_list' %}"><span class="profile-name">Учебник</span></a>
                             {% endif %}
                         </div>
                         
@@ -67,8 +69,11 @@
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                         </p>
                         <a href="{% if user.authenticated %}#{% else %}{% url 'login' %}{% endif %}">
-                            <button class="start-btn">
-                                Начать обучение
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text">Погнали!</span>
                             </button>
                         </a>
                     </div>
@@ -81,39 +86,39 @@
             <div class="line">
                 <div class="cards">
                     <div class="card card1">
-                        <img class="card-img" src="{% static 'app/img/ellipse card 1.png' %}" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 1.svg' %}" alt="ellipse">
                         <h3 class="card-head">
-                            20 минут в день
+                            Каждый день по немногу
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            Уделяйте столько времени, сколько можете
                         </p>
                     </div>
                     <div class="card card2">
-                        <img class="card-img" src="{% static 'app/img/ellipse card 2.png' %}" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 2.svg' %}" alt="ellipse">
                         <h3 class="card-head">
                             Запоминайте больше
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            Ускоряйте чтение, не уменьшая понимание
                         </p>
                     </div>
                     <div class="card card3">
-                        <img class="card-img" src="{% static 'app/img/ellipse card 3.png' %}" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 3.svg' %}" alt="ellipse">
                         <h3 class="card-head">
                             Читайте в 8 раз быстрее
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            Выйдете за пределы ваших возможностей
                         </p>
                     </div>
                     <div class="card card4">
-                        <img class="card-img" src="{% static 'app/img/ellipse card 4.png' %}" alt="ellipse">
+                        <img class="card-img" src="{% static 'app/img/ellipse card 4.svg' %}" alt="ellipse">
                         <h3 class="card-head">
-                            Осваивайте любые списки литературы
+                            Учитесь эффективнее
                         </h3>
                         <p class="card-p">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            Осваивайте любые списки литературы
                         </p>
                     </div>
                 </div>
@@ -147,9 +152,14 @@
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                 </p>
                 <a href="">
-                    <button class="register-btn">
-                        Зарегестрироваться
-                    </button>
+                    <div class="register-btn">
+                        <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Регестрация</span>
+                        </button>
+                    </div>
                 </a>
             </div>
             </article>

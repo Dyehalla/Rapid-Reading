@@ -2,44 +2,35 @@
     box-sizing: border-box;
 }
 
+p {
+    margin-top: 0;
+}
+
 @font-face {
-    font-family: 'OpenSans';
-    src: local('OpenSans-Regular'), 
-    url('../fonts/OpenSans-Regular.woff2') format("woff2");
+    font-family: 'Inglobal';
+    src: local('Inglobal-Regular'),
+    url('../fonts/Inglobal-Regular.woff2') format("woff2");
     font-weight: 400;
     font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'OpenSans';
-    src: local('OpenSans-Light'), 
-    url('../fonts/OpenSans-Light.woff2') format("woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'OpenSans';
-    src: local('OpenSans-SemiBold'), 
-    url('../fonts/OpenSans-SemiBold.woff2') format("woff2");
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'OpenSans';
-    src: local('OpenSans-Bold'), 
-    url('../fonts/OpenSans-Bold.woff2') format("woff2");
+    font-family: 'Inglobal';
+    src: local('Inglobal-Bold'),
+    url('../fonts/Inglobal-Regular.woff2') format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 
+html {
+    background-color: #FFEFD5;
+}
+
 body {
-    margin: 0;
-    width: auto;
-    min-width: 1140px;
-    font-family: "OpenSans", Arial;
+    margin: auto;
+    min-width: 1140;
+    width: 1440px;
+    font-family: "Inglobal", Arial;
 }
 
 a {
@@ -52,51 +43,54 @@ a {
     margin: 0 auto;
 }
 
-.header-nav {
-    display: inline-block;
-    padding-right: 40px;
-}
-
-.logo {
-    padding-left: 40px;
-}
-
 header {
+    margin-left: 138px;
     margin-bottom: 60px;
-    margin-top: 40px;
+    margin-top: 26px;
+    width: 1165px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 25px;
+    margin: 0;
 }
 
 .header-list {
     list-style-type: none;
     margin: 0;
-    display: flex;
 }
 
 .header-list-item {
     display: inline;
-    font-family: 'OpenSans', 'Arial';
+    font-family: 'Inglobal', 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     padding: 15px;
 }
 
+.header-nav {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.logo2 {
+    margin-left: 250px;
+    margin-bottom: 25px;
+}
+
 .profile {
-    display: inline-flex;
-    align-content: center;
-    grid-gap: 5px;
+    display: inline;
 }
 
 .start-btn {
     width: 354px;
     height: 84px;
-    font-family: 'OpenSans';
+    font-family: 'Inglobal';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -117,18 +111,19 @@ main {
 
 .title {
     color: #FD6916;
-    font-family: 'OpenSans';
+    font-family: 'Inglobal';
     font-style: normal;
     font-weight: 400;
     font-size: 50px;
     line-height: 68px;
-    margin: 0 0 20px;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .text {
     display: inline-block;
     max-width: 900px;
-    font-family: 'OpenSans';
+    font-family: 'Inglobal';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -144,11 +139,10 @@ main {
     width: 354px;
     height: 84px;
     border: none;
-    cursor: pointer;
 }
 
 .btn-text {
-    font-family: 'OpenSans';
+    font-family: 'Inglobal';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -159,22 +153,15 @@ main {
 .btn-and-timer {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .timer {
     width: 113px;
     text-align: center;
-    font-size: 30px;
-    margin-left: 5px;
+    font-size: 25px;
 }
 
 .to-send {
     display: none;
-}
-
-.profile {
-    display: inline-flex;
-    align-content: center;
-    grid-gap: 5px;
 }
