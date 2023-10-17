@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Rapid Reading</title>
+
+    <link rel="stylesheet" href="{% static '/manual.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a class="logo" href="#">
+                <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
+            </a>
+
+            <img class="logo2" src="{% static 'app/img/Logo 2.svg' %}" alt="cool logo img">
+
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-list-item">
+                        <a href="#" class="header-link">
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="header-list-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
+                        </a>
+                        {% else %}
+                        <a href="{% url 'manual' %}" class="header-link">
+                            Учебник
+                        </a>
+                        {% endif %}
+                    </li>
+
+                    <li class="header-list-item">
+                        <div class="profile">
+                            {% if not user.is_authenticated %}
+                            <a href="{% url 'login' %}" class="header-link">
+                                Войти
+                            </a>
+                            {% else %}
+                                 <a href="{% url 'manual' %}"><span class="profile-name">Учебник</span></a>
+                            {% endif %}
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="chapter-nav-container">
+            <h2 class="chapter-nav-head">Навигация</h2>
+            <div class="main-circle">
+                <span class="chapters-head">Глава</span>
+                <a href="{% url 'chapter' 1 %}"><button class="btn btn-1">1</button></a>
+                    <a href="{% url 'chapter' 2 %}"><button class="btn btn-2">2</button></a>
+                    <a href="{% url 'chapter' 3 %}"><button class="btn btn-3">3</button></a>
+                    <a href="{% url 'chapter' 4 %}"><button class="btn btn-4">4</button></a>
+                    <a href="{% url 'chapter' 5 %}"><button class="btn btn-5">5</button></a>
+                    <a href="{% url 'chapter' 6 %}"><button class="btn btn-6">6</button></a>
+                    <a href="{% url 'chapter' 7 %}"><button class="btn btn-7">7</button></a>
+                    <a href="{% url 'chapter' 8 %}"><button class="btn btn-8">8</button></a>
+                <svg class="arrow-circle" width="34" height="46" viewBox="0 0 34 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="Arrow 6" d="M33.8945 6.44721C34.1415 5.95323 33.9412 5.35255 33.4472 5.10557L25.3974 1.08068C24.9034 0.833692 24.3027 1.03392 24.0557 1.5279C23.8088 2.02188 24.009 2.62255 24.503 2.86954L31.6584 6.44721L28.0807 13.6026C27.8337 14.0966 28.034 14.6973 28.5279 14.9443C29.0219 15.1913 29.6226 14.991 29.8696 14.4971L33.8945 6.44721ZM2.62579 45.0978C3.16733 39.5869 6.41529 31.5024 11.7997 24.0302C17.1765 16.5684 24.5816 9.86028 33.3163 6.94868L32.6838 5.05132C23.4187 8.13973 15.703 15.1923 10.1771 22.8609C4.65869 30.5191 1.22182 38.9345 0.635382 44.9022L2.62579 45.0978Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="images">
+                <img class="content-images" src="{% static 'img/Content images.svg' %}" alt="">
+            </div>
+            <div class="content-head-container">
+                <img class="arrow-left" src="{% static 'img/Arrow left.svg' %}" alt="">
+                <h2 class="content-head">
+                    {{ head }}
+                </h2>
+                <img class="arrow-right" src="{% static 'img/Arrow right.svg' %}" alt="">
+            </div>
+            <div class="content">
+                {{ paragraph }}
+            </div>
+        </div>
+
+        <div class="train-container">
+            <div class="train-head-container">
+                <img class="dumbbell" src="{% static 'img/dumbbell.svg' %}" alt="">
+                <span class="train-head">Тренировка</span>
+            </div>
+            <div class="week-buttons">
+                <button class="week-btn week-1">Неделя 1</button>
+                <button class="week-btn week-2">Неделя 2</button>
+                <button class="week-btn week-3">Неделя 3</button>
+                <button class="week-btn week-4">Неделя 4</button>
+                <button class="week-btn week-5">Неделя 5</button>
+                <button class="week-btn week-6">Неделя 6</button>
+                <button class="week-btn week-7">Неделя 7</button>
+                <button class="week-btn week-8">Неделя 8</button>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+
+</html>

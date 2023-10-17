@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'myauth.apps.MyauthConfig',
     'speedcheckapp.apps.SpeedcheckappConfig',
+    'manual.apps.ManualConfig',
 
 ]
 

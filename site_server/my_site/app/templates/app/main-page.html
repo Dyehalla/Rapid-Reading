@@ -33,7 +33,7 @@
                             Выйти
                         </a>
                         {% else %}
-                        <a href="#" class="header-link">
+                        <a href="{% url 'manual' %}" class="header-link">
                             Учебник
                         </a>
                         {% endif %}
@@ -46,7 +46,7 @@
                                 Войти
                             </a>
                             {% else %}
-                                 <a href="{% url 'results_list' %}"><span class="profile-name">Учебник</span></a>
+                                 <a href="{% url 'manual' %}"><span class="profile-name">Учебник</span></a>
                             {% endif %}
                         </div>
                         
