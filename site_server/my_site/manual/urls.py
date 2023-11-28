@@ -5,5 +5,5 @@ appname = "manual"
 
 urlpatterns = [
     path('', main_manual, name='manual'),
-    path('/<int:chapter>', manual, name='chapter')
+    path('<int:chapter>', manual, name='chapter')
 ]

@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container header-container">
-            <a class="logo" href="#">
+            <a class="logo" href="{% url 'home' %}">
                 <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
             </a>
 
@@ -22,21 +22,15 @@
             <nav class="header-nav">
                 <ul class="header-list">
                     <li class="header-list-item">
-                        <a href="#" class="header-link">
+                        <a href="{% url 'home' %}" class="header-link">
                             Главная
                         </a>
                     </li>
 
                     <li class="header-list-item">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}" class="header-link">
-                            Выйти
+                        <a href="{% url 'start' %}" class="header-link">
+                            Тест
                         </a>
-                        {% else %}
-                        <a href="{% url 'manual' %}" class="header-link">
-                            Учебник
-                        </a>
-                        {% endif %}
                     </li>
 
                     <li class="header-list-item">
@@ -49,6 +43,18 @@
                                  <a href="{% url 'manual' %}"><span class="profile-name">Учебник</span></a>
                             {% endif %}
                         </div>
+                    </li>
+
+                    <li class="header-list-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
+                        </a>
+                        {% else %}
+                        <a href="{% url 'manual' %}" class="header-link">
+                            Учебник
+                        </a>
+                        {% endif %}
                     </li>
                 </ul>
             </nav>
@@ -101,9 +107,6 @@
                 <button class="week-btn week-3">Неделя 3</button>
                 <button class="week-btn week-4">Неделя 4</button>
                 <button class="week-btn week-5">Неделя 5</button>
-                <button class="week-btn week-6">Неделя 6</button>
-                <button class="week-btn week-7">Неделя 7</button>
-                <button class="week-btn week-8">Неделя 8</button>
             </div>
         </div>
     </div>

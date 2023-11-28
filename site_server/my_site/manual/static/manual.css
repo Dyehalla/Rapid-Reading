@@ -9,7 +9,7 @@ html {
 @font-face {
     font-family: 'Inglobal';
     src: local('Inglobal-Regular'),
-    url('../../../../pages/pages/fonts/Inglobal-Regular.woff2') format("woff2");
+    url('../../fonts/Inglobal-Regular.woff2') format("woff2");
     font-weight: 400;
     font-style: normal;
 }
@@ -17,16 +17,16 @@ html {
 @font-face {
     font-family: 'Inglobal';
     src: local('Inglobal-Bold'),
-    url('../../../../pages/pages/fonts/Inglobal-Regular.woff2') format("woff2");
+    url('../../fonts/Inglobal-Regular.woff2') format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 body {
     margin: auto;
-    min-width: 1140;
-    width: 1440px;
-    font-family: "OpenSans", Arial;
+    min-width: 1440px;
+    width: 1920px;
+    font-family: "Inglobal", Arial;
 }
 
 a {
@@ -35,7 +35,7 @@ a {
 }
 
 header {
-    margin-left: 138px;
+    margin-left: 20%;
     margin-bottom: 60px;
     margin-top: 26px;
     width: 1165px;

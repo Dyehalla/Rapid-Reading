@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="container header-container">
-            <a class="logo" href="#">
+            <a class="logo" href="{% url 'home' %}">
                 <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
             </a>
 
@@ -22,21 +22,15 @@
             <nav class="header-nav">
                 <ul class="header-list">
                     <li class="header-list-item">
-                        <a href="#" class="header-link">
+                        <a href="{% url 'home' %}" class="header-link">
                             Главная
                         </a>
                     </li>
 
                     <li class="header-list-item">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}" class="header-link">
-                            Выйти
+                        <a href="{% url 'start' %}" class="header-link">
+                            Тест
                         </a>
-                        {% else %}
-                        <a href="{% url 'manual' %}" class="header-link">
-                            Учебник
-                        </a>
-                        {% endif %}
                     </li>
 
                     <li class="header-list-item">
@@ -49,7 +43,18 @@
                                  <a href="{% url 'manual' %}"><span class="profile-name">Учебник</span></a>
                             {% endif %}
                         </div>
-                        
+                    </li>
+
+                    <li class="header-list-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
+                        </a>
+                        {% else %}
+                        <a href="{% url 'manual' %}" class="header-link">
+                            Учебник
+                        </a>
+                        {% endif %}
                     </li>
                 </ul>
             </nav>
@@ -73,7 +78,7 @@
                                 <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
                                 </span>
-                                <span class="button-text">Погнали!</span>
+                                <span class="button-text">Начать</span>
                             </button>
                         </a>
                     </div>
@@ -106,7 +111,7 @@
                     <div class="card card3">
                         <img class="card-img" src="{% static 'app/img/ellipse card 3.svg' %}" alt="ellipse">
                         <h3 class="card-head">
-                            Читайте в 8 раз быстрее
+                            Читайте в разы быстрее
                         </h3>
                         <p class="card-p">
                             Выйдете за пределы ваших возможностей

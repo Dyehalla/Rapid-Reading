@@ -13,27 +13,24 @@
 <body>
     <header>
         <div class="container header-container">
-            <a class="logo" href="#">
+            <a class="logo" href="{% url 'home' %}">
                 <img src="{% static 'app/img/Logo img.svg' %}" alt="logo img">
             </a>
+
+            <img class="logo2" src="{% static 'app/img/Logo 2.svg' %}" alt="cool logo img">
+
             <nav class="header-nav">
                 <ul class="header-list">
                     <li class="header-list-item">
-                        <a href="#" class="header-link">
+                        <a href="{% url 'home' %}" class="header-link">
                             Главная
                         </a>
                     </li>
 
                     <li class="header-list-item">
-                        {% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}" class="header-link">
-                            Выйти
+                        <a href="{% url 'start' %}" class="header-link">
+                            Тест
                         </a>
-                        {% else %}
-                        <a href="{% url 'reg' %}" class="header-link">
-                            Зарегистрироваться
-                        </a>
-                        {% endif %}
                     </li>
 
                     <li class="header-list-item">
@@ -43,11 +40,21 @@
                                 Войти
                             </a>
                             {% else %}
-                                <img src="{% static 'app/img/profile.png' %}" alt="profile">
-                                 <span class="profile-name">{{ user.username }}</span>
+                                 <a href="{% url 'manual' %}"><span class="profile-name">Учебник</span></a>
                             {% endif %}
                         </div>
+                    </li>
 
+                    <li class="header-list-item">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="header-link">
+                            Выйти
+                        </a>
+                        {% else %}
+                        <a href="{% url 'manual' %}" class="header-link">
+                            Учебник
+                        </a>
+                        {% endif %}
                     </li>
                 </ul>
             </nav>

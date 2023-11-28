@@ -10,6 +10,6 @@ class HomePage(TemplateView):
 
 def my_results_view(request):
     context = {
-        'results': Result.objects.filter(user_profile=request.user.profile)
+        'results': Result.objects.filter(user_id=request.user.id)
     }
     return render(request, 'app/profile-results.html', context=context)

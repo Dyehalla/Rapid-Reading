@@ -31,6 +31,8 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
+        log = open('log.txt', 'w')
+        log.write('log')
         response = super().form_valid(form)
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password1')
