@@ -6,22 +6,6 @@ html {
     background-color: #FFEFD5;
 }
 
-@font-face {
-    font-family: 'Inglobal';
-    src: local('Inglobal-Regular'),
-    url('../fonts/Inglobal-Regular.woff2') format("woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inglobal';
-    src: local('Inglobal-Bold'),
-    url('../fonts/Inglobal-Regular.woff2') format("woff2");
-    font-weight: 700;
-    font-style: normal;
-}
-
 body {
     margin: auto;
     min-width: 1440px;
@@ -39,15 +23,6 @@ a {
     margin: 0 auto;
 }
 
-.header-nav {
-    display: inline-block;
-    padding-right: 40px;
-}
-
-.logo {
-    padding-left: 40px;
-}
-
 header {
     margin-left: 20%;
     margin-bottom: 60px;
@@ -58,13 +33,13 @@ header {
 .header-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    align-items: center;
+    margin: 0;
 }
 
 .header-list {
     list-style-type: none;
     margin: 0;
-    display: flex;
 }
 
 .header-list-item {
@@ -72,14 +47,19 @@ header {
     font-family: 'Inglobal', 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     padding: 15px;
 }
 
-.profile {
-    display: inline-flex;
-    align-content: center;
-    grid-gap: 5px;
+.header-nav {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+.logo2 {
+    margin-left: 250px;
+    margin-bottom: 25px;
 }
 
 .profile {

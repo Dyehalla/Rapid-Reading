@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: #FFEFD5;
-}
-
 @font-face {
     font-family: 'Inglobal';
     src: local('Inglobal-Regular'),
@@ -22,11 +18,18 @@ html {
     font-style: normal;
 }
 
+html {
+    background-color: #FFEFD5;
+}
+
 body {
     margin: auto;
     min-width: 1440px;
     width: 1920px;
     font-family: "Inglobal", Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -34,8 +37,15 @@ a {
     text-decoration: none;
 }
 
+.container {
+    min-width: 1140px;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 30px;
+    margin-bottom: 50px;
+}
+
 header {
-    margin-left: 20%;
     margin-bottom: 60px;
     margin-top: 26px;
     width: 1165px;
@@ -45,12 +55,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
     margin: 0;
 }
 
 .header-list {
-    display: flex;
     list-style-type: none;
     margin: 0;
 }
@@ -58,6 +66,8 @@ header {
 .header-list-item {
     display: inline;
     font-family: 'Inglobal', 'Arial';
+    font-style: normal;
+    font-weight: 400;
     font-size: 22px;
     padding: 15px;
 }
@@ -69,23 +79,24 @@ header {
 }
 
 .logo2 {
-    margin-left: 320px;
+    margin-left: 250px;
     margin-bottom: 25px;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.profile {
+    display: inline;
 }
 
 .content-container {
     position: relative;
     width: 930px;
+    min-height: 800px;
     background-color: #FFE6BE;
     border-radius: 45px;
     padding-left: 75px;
     padding-right: 75px;
     padding-top: 45px;
+    padding-bottom: 55px;
     padding-bottom: 55px;
 }
 
@@ -109,16 +120,16 @@ header {
 .content-head-container {
     font-family: 'Inglobal', 'Arial';
     font-weight: 700;
-    width: 220px;
+
     display: flex;
     justify-content: space-between;
-    margin-left: 274px;
     margin-bottom: 25px;
 }
 
 .train-container {
     padding-top: 38px;
     width: 172px;
+    max-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,6 +209,7 @@ header {
     display: block;
     font-size: 25px;
     font-weight: 700;
+    margin-top: 0;
 }
 
 .chapter-nav-container {

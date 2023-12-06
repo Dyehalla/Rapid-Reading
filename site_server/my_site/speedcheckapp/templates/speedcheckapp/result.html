@@ -96,7 +96,7 @@
         </p>
 
         {% if user.is_authenticated %}
-            <a href="{% url 'save' %}"><button class="save-btn">Сохранить</button></a>
+            <a href="{% url 'results' %}"><button class="save-btn">Сохранить</button></a>
         {% else %}
             <p class="login">
                 Хотите сохранять последующие результаты?<br><a href="{% url 'login' %}"><span class="orange-text"><u>Войдите</u></span></a> в учетную запись
